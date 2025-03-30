@@ -5,7 +5,10 @@ import { useEffect, useState } from 'react'
 
 function App() {
   const [data, setData] = useState([]);
-  const today = new Date().getDay();
+  
+  const date = new Date()
+  const today = date.getDay();
+
   const weekdays = {
     0: "G", //"Sunday",
     1: "A", //"Monday",
@@ -17,7 +20,7 @@ function App() {
   };
 
   const query = `SELECT ${weekdays[today]}`;
-console.log(query)
+
   useEffect(() => {   
     getSheetData({
       sheetID: import.meta.env.VITE_SHEET_ID,
@@ -35,18 +38,12 @@ console.log(query)
       <h1 className="read-the-docs">
         Gymmy some love
       </h1>
-      <h2>Today</h2>
+      <h2>Today {date.toDateString()}</h2>
       <section className="Today" style={{width:"100%", color:"white", textAlign:"left"}}>
         <ul>
-          {
-            data && data.map((d, i)=>(
-              <li key={i} >{d}</li>
-            ))
-          }
+        {data && data.map((d, i) => d ? <li key={i}>{d}</li> : null)}
         </ul>
       </section>
-
-
     </>
   )
 }
