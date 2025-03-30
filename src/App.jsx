@@ -7,16 +7,17 @@ function App() {
   const [data, setData] = useState([]);
   const today = new Date().getDay();
   const weekdays = {
-    0: "B",
-    1: "C",
-    2: "D",
-    3: "E",
-    4: "F",
-    5: "G",
-    6: "F",
+    0: "G", //"Sunday",
+    1: "A", //"Monday",
+    2: "B", //"Tuesday",
+    3: "C", //"Wednesday",
+    4: "D", //"Thursday",
+    5: "E", //"Friday",
+    6: "F", //"Saturday",
   };
-  const query = `SELECT ${weekdays[today]}`;
 
+  const query = `SELECT ${weekdays[today]}`;
+console.log(query)
   useEffect(() => {   
     getSheetData({
       sheetID: import.meta.env.VITE_SHEET_ID,
