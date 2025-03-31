@@ -1,0 +1,9 @@
+paypal: https://developer.paypal.com/api/nvp-soap/paypal-payments-standard/integration-guide/pps-integration/
+paypal buttons: https://www.youtube.com/watch?v=aA1NRKpKa_4
+backup googlesheets: https://gist.github.com/abhijeetchopra/99a11fb6016a70287112
+
+5 payments ways: https://www.youtube.com/watch?v=4vJh0pf4SrY
+
+stripe: https://dashboard.stripe.com/test/payment-links/plink_1R8azZ06KjsG2dSwEVW8oLCk
+
+
