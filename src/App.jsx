@@ -39,9 +39,8 @@ function App() {
   }
   return (
     <> 
-      {/* <img src="https://drive.google.com/uc?id=1Q0BG-1s53tLKD3qZXroJ02ClaV_n5oJB" /> */}
       {page=="home" &&
-        <img src="https://lh3.googleusercontent.com/d/1Q0BG-1s53tLKD3qZXroJ02ClaV_n5oJB" width={200}/>
+        <img src={`https://lh3.googleusercontent.com/d/${import.meta.env.VITE_IMG_ID}`} width={200}/>
       }
       
       <h1 className="read-the-docs">
@@ -89,8 +88,6 @@ function App() {
             </stripe-buy-button>
         </div> 
         <button onClick={()=>handlePayment("home")}>Cancel</button>
-
-
         </>
         }
     </>

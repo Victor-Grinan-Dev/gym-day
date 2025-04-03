@@ -1,8 +1,6 @@
 const getSheetData = ({ sheetID, sheetName, query, callback }) => {
   const base = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?`;
-  const url = `${base}&sheet=${encodeURIComponent(
-    sheetName
-  )}&tq=${encodeURIComponent(query)}`;
+  const url = `${base}&sheet=${encodeURIComponent(sheetName)}&tq=${encodeURIComponent(query)}`;
 
   fetch(url)
     .then((res) => res.text())
