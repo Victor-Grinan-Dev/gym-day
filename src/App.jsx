@@ -11,7 +11,7 @@ function App() {
   const today = date.getDay();
 
   const weekdays = {
-    0: "A", //"Sunday",
+    0: "G", //"Sunday",
     1: "A", //"Monday",
     2: "B", //"Tuesday",
     3: "C", //"Wednesday",
@@ -42,7 +42,7 @@ function App() {
       {page=="home" &&
         <img src={`https://lh3.googleusercontent.com/d/${import.meta.env.VITE_IMG_ID}`} width={200}/>
       }
-      
+      {console.log(`https://lh3.googleusercontent.com/d/${import.meta.env.VITE_IMG_ID}`)}
       <h1 className="read-the-docs">
         Gymmy some love
       </h1>
